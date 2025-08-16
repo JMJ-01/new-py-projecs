@@ -12,7 +12,7 @@ data_csv1=pd.read_csv('Toyota_cleaned_final.csv')
 
 
 missing=data_csv1[data_csv1.isna().any(axis=1)]
-
+print (missing)
 
 data_csv1['Age'] = data_csv1['Age'].fillna(data_csv1['Age'].mean())
 data_csv1['KM'] = data_csv1['KM'].fillna(data_csv1['KM'].median())
